@@ -16,6 +16,7 @@
             Thêm</a>
     </div>
 </div>
+<h1>Hello</h1>
 <table class="table table-striped table-hover">
     <thead>
     <tr>
