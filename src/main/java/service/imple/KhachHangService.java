@@ -52,4 +52,9 @@ public class KhachHangService implements NameObjectService<KhachHang> {
     public KhachHang findById(Object o) {
         return null;
     }
+
+    @Override
+    public List<KhachHang> findByName(String name) {
+        return null;
+    }
 }

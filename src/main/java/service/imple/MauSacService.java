@@ -47,4 +47,9 @@ public class MauSacService implements NameObjectService<MauSac> {
     public MauSac findById(Object o) {
         return null;
     }
+
+    @Override
+    public List<MauSac> findByName(String name) {
+        return null;
+    }
 }

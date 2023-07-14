@@ -46,4 +46,9 @@ public class ChucVuService implements NameObjectService<ChucVu> {
     public ChucVu findById(Object o) {
         return null;
     }
+
+    @Override
+    public List<ChucVu> findByName(String name) {
+        return null;
+    }
 }

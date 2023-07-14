@@ -52,4 +52,9 @@ public class NhanVienService implements NameObjectService<NhanVien> {
     public NhanVien findById(Object o) {
         return null;
     }
+
+    @Override
+    public List<NhanVien> findByName(String name) {
+        return null;
+    }
 }

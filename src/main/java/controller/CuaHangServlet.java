@@ -10,6 +10,7 @@ import service.imple.CuaHangService;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,7 +20,8 @@ import java.util.stream.Collectors;
         "/cua-hang/store",      //POST
         "/cua-hang/edit",       //GET
         "/cua-hang/update",     //POST
-        "/cua-hang/delete"})    //GET
+        "/cua-hang/delete",
+        "/cua-hang/search"})    //GET
 public class CuaHangServlet extends HttpServlet {
     private final CuaHangService cuaHangService;
 
@@ -38,6 +40,8 @@ public class CuaHangServlet extends HttpServlet {
             this.edit(req, resp);
         } else if (uri.contains("delete")) {
             this.delete(req, resp);
+        } else if (uri.contains("search")) {
+            this.search(req, resp);
         } else {
             this.index(req, resp);
         }
@@ -83,6 +87,20 @@ public class CuaHangServlet extends HttpServlet {
         cuaHangService.delete(cuaHang);
         req.setAttribute("list", cuaHangService.findAllByObject());
         req.getRequestDispatcher("/views/cua-hang/show.jsp").forward(req, resp);
+    }
+
+    protected void search(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+        String name = req.getParameter("ten");
+        List<CuaHang> list = cuaHangService.findByName(name);
+        if (list.isEmpty()) {
+            req.setAttribute("thongBao", "Khong tim thay cua hang " + name);
+            req.setAttribute("list", cuaHangService.findAllByObject());
+        } else {
+            req.setAttribute("list", list);
+        }
+        req.getRequestDispatcher("/views/cua-hang/show.jsp")
+                .forward(req, resp);
     }
 
     @Override

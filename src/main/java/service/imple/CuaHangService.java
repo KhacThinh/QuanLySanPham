@@ -51,4 +51,9 @@ public class CuaHangService implements NameObjectService<CuaHang> {
     public CuaHang findById(Object o) {
         return cuaHangRepository.findById(o);
     }
+
+    @Override
+    public List<CuaHang> findByName(String name) {
+        return cuaHangRepository.findByName(name);
+    }
 }

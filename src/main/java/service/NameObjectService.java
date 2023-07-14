@@ -13,4 +13,6 @@ public interface NameObjectService<E> {
     public boolean delete(Object o);
 
     public E findById(Object o);
+
+    public List<E> findByName(String name);
 }

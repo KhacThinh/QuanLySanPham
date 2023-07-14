@@ -44,4 +44,9 @@ public class MauSacRepository implements NameObjectRepository<MauSac> {
     public MauSac findById(Object o) {
         return null;
     }
+
+    @Override
+    public List<MauSac> findByName(String name) {
+        return null;
+    }
 }

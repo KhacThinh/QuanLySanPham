@@ -13,6 +13,16 @@
         <h1>Danh sách cửa hàng</h1>
         <a href="/QuanLiCuaHang_war_exploded/cua-hang/create" class="btn btn-primary"><i class="bi bi-person-add"></i>
             Thêm</a>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <form class="d-flex" role="search" action="/QuanLiCuaHang_war_exploded/cua-hang/search" method="get">
+                    <input class="form-control me-2" name="ten" type="search" placeholder="Search Name"
+                           aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+            <span style="color: red">${thongBao}</span>
+        </nav>
     </div>
     <table class="table table-striped table-hover">
         <thead>
