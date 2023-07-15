@@ -94,6 +94,7 @@ public class CuaHangServlet extends HttpServlet {
         String name = req.getParameter("ten");
         List<CuaHang> list = cuaHangService.findByName(name);
         if (list.isEmpty()) {
+            req.setAttribute("searchName", name);
             req.setAttribute("thongBao", "Khong tim thay cua hang " + name);
             req.setAttribute("list", cuaHangService.findAllByObject());
         } else {

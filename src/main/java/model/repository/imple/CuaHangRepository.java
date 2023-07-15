@@ -63,7 +63,7 @@ public class CuaHangRepository implements NameObjectRepository<CuaHang> {
     public List<CuaHang> findByName(String name) {
         List<CuaHang> cuaHangList = this.list
                 .stream()
-                .filter(t -> t.getTen().contains(name))
+                .filter(t -> t.getTen().toLowerCase().contains(name.toLowerCase()))
                 .collect(Collectors.toList());
         return cuaHangList;
     }

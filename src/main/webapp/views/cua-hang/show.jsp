@@ -17,7 +17,7 @@
             <div class="container-fluid">
                 <form class="d-flex" role="search" action="/QuanLiCuaHang_war_exploded/cua-hang/search" method="get">
                     <input class="form-control me-2" name="ten" type="search" placeholder="Search Name"
-                           aria-label="Search">
+                           aria-label="Search" value="${searchName}">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
