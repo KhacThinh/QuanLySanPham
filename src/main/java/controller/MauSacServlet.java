@@ -1,5 +1,6 @@
 package controller;
 
+import model.entity.ChiTietSP;
 import model.entity.MauSac;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
