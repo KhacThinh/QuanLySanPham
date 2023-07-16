@@ -22,4 +22,5 @@ public class ChiTietSP {
     private int soLuongTon;
     private double giaNhap;
     private double giaBan;
+
 }
